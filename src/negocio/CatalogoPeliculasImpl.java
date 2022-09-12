@@ -3,6 +3,7 @@ package negocio;
 import datos.AccesoDatosImpl;
 import datos.IAccesoDatos;
 import dominio.Pelicula;
+import dominio.PeliculaAmpliado;
 import excepciones.AccesoDatosEx;
 import excepciones.EscrituraDatosEx;
 
@@ -30,9 +31,9 @@ public class CatalogoPeliculasImpl implements CatalogoPeliculas {
     @Override
     public void listarPeliculas(String nombreArchivo) {
         try {
-            List<Pelicula> peliculas = datos.listar(nombreArchivo);
+            List<PeliculaAmpliado> peliculas = datos.cargaInformacion(nombreArchivo);
             System.out.println("===== Listar Peliculas =====");
-            for (Pelicula peli : peliculas){
+            for (PeliculaAmpliado peli : peliculas){
                 System.out.println("Peli: "+peli);
             }
         }catch(Exception e){

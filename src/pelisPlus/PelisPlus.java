@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class PelisPlus {
     private static final Scanner scanner = new Scanner(System.in);
     private static int opcion = -1;
-    private static final String nombreArchivo = "C:\\Users\\Windows 10\\Desktop\\peliculas.txt";
+    private static final String nombreArchivo = "C:\\Users\\Windows 10\\Desktop\\PelisConFecha.csv";
     private static final CatalogoPeliculas catalogoPeli = new CatalogoPeliculasImpl();
 
     public static void main(String[] args) {

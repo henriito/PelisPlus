@@ -1,6 +1,7 @@
 package datos;
 
 import dominio.Pelicula;
+import dominio.PeliculaAmpliado;
 import excepciones.AccesoDatosEx;
 import excepciones.EscrituraDatosEx;
 import excepciones.LecturaDatosEx;
@@ -13,5 +14,6 @@ public interface IAccesoDatos  {
     public String Buscar(String nombreArchivo, String buscar) throws EscrituraDatosEx;
     public void crear(String nombreArchivo) throws AccesoDatosEx;
     public void borrar (String nombreArchivo) throws AccesoDatosEx;
+    public List<PeliculaAmpliado> cargaInformacion(String nombreArchivo) throws LecturaDatosEx;
 
 }
